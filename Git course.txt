@@ -65,3 +65,19 @@ Undo changes, but the <commit-hash> is of the commit that has the bad changes.
 And this create a new commit with the undochanges.
 This is useful when you are collaborating in a project.
 
+//---------------------------------- Reflogs -----------------------------------
+
+Git only keeps reflogs on your local activity. They are not shared with collaborators.
+Reflogs also expire. Git cleans out old entires after around 90 days, though this can be configured.
+
+*** git reflog  ó  git reflog show HEAD
+Will show the log of a specific reference.
+The reflog command accepts subcommands (show, expire, delete, and exists).
+Show is the only commonly used variant, and the default subcommand.
+
+*** git checkout <hash of th reflog>
+Move to a deleted commit
+*** git reset --hard <reflog-commit-hash>
+Reset to a deleted commit
+
+

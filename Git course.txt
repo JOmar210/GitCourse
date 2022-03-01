@@ -1,0 +1,26 @@
+Token: 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
+
+//----------------------------------Git Stash-----------------------------------
+
+All the changes of the working directory, before Add and commit
+
+***	git stash === git stash save
+Helps you to save changes that you are not yet ready to commit.
+
+***	git stash list
+View all stashes
+
+***	git stash pop  ó  git stash pop stash@{#}
+Remove the most recently stashed changes in your stash and re-apply them to your working compy
+
+***	git stash apply  ó  git stash apply stash@{#}
+Apply whatevere is sthashed away, without removing it from the stash. This can be useful if you want to apply astashed changes to multiple branches.
+
+***	git stash drop stash@{#}
+Delete a particular stash
+
+
+
+
+
+

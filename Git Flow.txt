@@ -1,0 +1,138 @@
+
+//---------------------------------------- Configurar git ----------------------------------------------------------------
+//------- Primero checamos que version de git tenemos, y si es que la tenemos instalada--------
+	git version
+
+//------- Ver la configuracion de git y asegurarse que user.name y user.email esten correctos--
+	git config --list
+
+//------- En caso de que aun no esten configurados configurarlos-------------------------------
+	git config --global user.name "Nombre de tu usuario de git"
+	git config --global user.email "email de git"
+
+*/---Nota: Para salir de la consola de git presionar "q", si no funciona intentar "ctrl + q" o "ctrl + c"---------------/*
+
+
+
+//---------------------------------------------- Crear repositorio -------------------------------------------------------
+//------- Nos ubicamos en la carpeta principal del proyecto que vamos a subir e iniciamos git, creara un directorio git---
+	git init
+
+//------- Checamos el status para ver en que estado de git nos encontramos-----------------------
+	git status
+
+//------- Agregar todos los archivos que se encuentran en el working directory-------------------
+	git add -A           o               git add (Cambio individual que quieras subir)
+	git status */---Solo para ver que se hayan agregado nuestros archivos---/*
+
+//------- Comentar los cambios que estamos subiendo para tener una idea de lo que se hizo--------
+	git commit -m "Agregas el comentario"	
+	git status */---Solo para ver que se hayan agregado nuestros archivos---/*
+
+//------- Para ver los logs que se han hecho (ver el autor, fecha y commit) ---------------------
+	git log
+//------- Conectarte a el repositorio creado en Github ------------------------------------------
+	git remote add origin http://github.com/repositorioquevasausar
+
+//------- Subir y vincularte a la rama remota ---------------------------------------------------
+	git push -u origin main(rama en la que te encuentras)
+
+//------- Subir cambios al repositorio ----------------------------------------------------------
+	git push origin main(rama en la que te encuentras)
+
+//------- Bajar ultima version del repositorio --------------------------------------------------
+	git pull origin main(rama en la que te encuentras)
+
+
+//---------------------------------------------- Clonar repositorio -----------------------------------------------------
+//------- Podemos utilizar repositorios que ya fueron creados y trabajar en ellos ---------------
+	git clone http://github.com/repositorioquevasaclonar
+
+*/------- Ver diferencia entre el repositorio y lo que esta en la maquina----------------------/*
+	git diff
+
+
+//---------------------------------------------- Branches ----------------------------------------------------------------
+*/------- No se recomienda trabajar en la rama principal de un proyecto, por lo que es necesario crear branches(ramas) en las que hagamos nuestros cambios y despues juntarlos a la rama principal -------/*
+//------- Ver en que rama nos encontramos actualmente --------------------------------------------
+	git branch
+
+//------- Ver todas las ramas incluidas las remotas ----------------------------------------------
+	git branch -a
+
+//------- Crear nueva Branch ---------------------------------------------------------------------
+	git branch minuevabranch
+
+//------- Moverte a diferente branch -------------------------------------------------------------
+	git checkout minuevabranch / git switch minuevabranch
+	git status */---Solo para corroborar en que rama estamos y checar si hay archivos pendientes por subir---/*
+
+//------- Editar Archivos de la nueva brabch -----------------------------------------------------
+	git add -A           o               git add (Cambio individual que quieras subir)
+	git status */---Solo para ver que se hayan agregado nuestros archivos---/*
+
+//------- Comentar los cambios que estamos subiendo para tener una idea de lo que se hizo--------
+	git commit -m "Agregas el comentario"	
+	git status */---Solo para ver que se hayan agregado nuestros archivos---/*
+
+//------- Subir cambios a la nueva rama del repositorio -----------------------------------------
+	git push -u origin minuevabranch(rama en la que te encuentras)vue 
+
+
+*/------- Pasar los cambios de una branch a otra ----------------------------------------------------------------------/*
+//------- Moverte a la branch en donde quieres agregar los cambios -------------------------------
+	git checkout main
+
+//------- Bajar ultima version de la rama -------------------------------------------------------
+	git pull origin main(rama en la que te encuentras)
+
+*/------- Mostrar las ramas que hemos mergeado hasta ahora -------------------------------------/*
+	git branch --merged
+
+//------- Juntar los cambios ---------------------------------------------------------------------
+	git merge minuevabranch(Rama de donde quieres los cambios)
+
+//------- Subir cambios al repositorio -----------------------------------------------------------
+	git push origin main(rama en la que te encuentras)
+
+
+*/------- En caso de que ya no vayas a utilizar alguna rama tambien puedes borrarla ------------------------------------/*
+//------- Borrar Branches del repositorio -------------------------------
+	git push origin --delete minuevabranch(Rama que quieres borrar)
+
+//------- Borrar Branches del repositorio Local(Tu maquina) -------------
+	git branch -d minuevabranch(Rama que quieres borrar)
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//		                                                                      //
+	Tutorial de GIT para principantes! - Usando la linea de comandos en Git
+//	          https://www.youtube.com/watch?v=kEPF-MWGq1w		              //
+
+//		                                                                      //
+	Tutorial de GIT - Parte 2 / Arreglando tus errores con la linea de comandos
+//		  https://www.youtube.com/watch?v=7-JHoPyJy-Q&t=132s                  //
+
+//		                                                                      //
+
+//		                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

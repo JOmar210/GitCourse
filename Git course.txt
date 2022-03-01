@@ -1,6 +1,8 @@
-Token: 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
+//-------Comments------
+1: HEAD usually refers to a Branch NOT a specific commit
+2: (git switch -) Take me to the last version of the branch where I am
 
-//----------------------------------Git Stash-----------------------------------
+//---------------------------------- Git Stash -----------------------------------
 
 All the changes of the working directory, before Add and commit
 
@@ -19,7 +21,28 @@ Apply whatevere is sthashed away, without removing it from the stash. This can b
 ***	git stash drop stash@{#}
 Delete a particular stash
 
+//---------------------------------- Undoing Changes -----------------------------------
 
+*** git checkout <commit-hash>  ó  git checkout HEAD~1
+View a previous commit
+
+We have a couple options:
+1. Stay in detached HEAD to examine the contents of the old commit. Poke around, view the files, etc.
+2. Leave and go back to whereever you were before -reattach the HEAD. (git switch <branch>  ó  git switch -)
+3. Create a new branch and switch to it. You can now make and save changes, since HEAD is no longer detached.
+
+*** git checkout HEAD <file>  ó  git checkout -- <file>
+Discarding Changes in that file, reverting back to the HEAD
+
+//---------------------------------- Restore -----------------------------------
+
+*** git restore <file> 
+Restore the file to the last commit
+
+*** git restore --source <commit-hash> <file>
+Restore the file to a specific commit
+
+ 
 
 
 
